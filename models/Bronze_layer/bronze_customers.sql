@@ -7,5 +7,6 @@ select
 	CUSTOMER_ID,
 	NAME,
 	SEGMENT,
-	COUNTRY
+	COUNTRY,
+    COUNTRY_CODE
 from {{ source('raw', 'RAW_CUSTOMERS') }}

@@ -4,4 +4,4 @@
     )
 }}
 
-select * from {{ ref('raw_country') }}
+select * from {{ ref('country') }}
