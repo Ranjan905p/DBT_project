@@ -46,5 +46,19 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+    Bronze_layer:
+      +schema: Bronze_layer
+      +materialized: view
+    Silver_layer:
+      +schema: Silver_layer
+      +materialized: table
+    intermediate:
+      +schema: init
+      +materialized: ephemeral
+    Gold_layer:
+      +schema: Gold_layer
+      +materialized: table
+
+
 
 

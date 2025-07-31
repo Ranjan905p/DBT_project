@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: int_profit_calculation
+    description: Calculates profit by order and product
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+
+  - name: int_order_payments
+    description: Joins order with payments
+    columns:
+      - name: order_id
+        tests:
+          - not_null

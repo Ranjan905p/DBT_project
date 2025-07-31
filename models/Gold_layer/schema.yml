@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: customer_profit
+    description: Profit summary at customer level
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+
+  - name: product_profit
+    description: Profit summary at product level
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+
+  - name: country_profit_summery
+    description: Profit summary by country and region
+
+  - name: payment_success_rate
+    description: Breakdown of payment status percentage
+
+  - name: unpaid_orders_audit
+    description: Orders that are unpaid or failed
+    columns:
+      - name: order_id
+        tests:
+          - not_null

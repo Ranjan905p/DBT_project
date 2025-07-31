@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: Cleaned customer table
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_orders
+    description: Cleaned orders table with data types
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        tests:
+          - not_null
+      - name: order_date
+        tests:
+          - not_null
+
+  - name: stg_products
+    description: Cleaned product table
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_payments
+    description: Cleaned payments table
+    columns:
+      - name: payment_id
+        tests:
+          - not_null
+          - unique
+      - name: status
+        tests:
+          - accepted_values:
+              values: ['Success', 'Failed', 'Pending']
+
+  - name: stg_country
+    description: Country seed mapping
+    columns:
+      - name: country_code
+        tests:
+          - not_null
